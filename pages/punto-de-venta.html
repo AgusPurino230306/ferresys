@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Punto de venta · FerreSys</title>
+<link rel="icon" href="../img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/main.js" defer></script>
+</head>
+<body data-page="pos" data-raiz="../">
+<header class="sidebar" id="menu">
+  <div class="brand"><img src="../img/logo.svg" alt="Logo de FerreSys: letra G sobre fondo verde azulado"><div><strong>FerreSys</strong><small>Gestión ferretera</small></div></div>
+  <nav aria-label="Navegación principal"><ul class="menu"><li><a href="../index.html"><span class="nav-txt"><span aria-hidden="true">⊞</span>Panel de control</span></a></li><li><a href="punto-de-venta.html" aria-current="page"><span class="nav-txt"><span aria-hidden="true">🛒</span>Punto de venta</span></a></li><li><a href="devoluciones.html"><span class="nav-txt"><span aria-hidden="true">↩️</span>Devoluciones</span></a></li><li><a href="inventario.html"><span class="nav-txt"><span aria-hidden="true">📦</span>Inventario</span></a></li><li><a href="aumento-precios.html"><span class="nav-txt"><span aria-hidden="true">💲</span>Aumento de precios</span></a></li><li><a href="alertas-stock.html"><span class="nav-txt"><span aria-hidden="true">⚠️</span>Alertas de stock</span> <span class="badge js-alertas">5</span></a></li><li><a href="cierre-caja.html"><span class="nav-txt"><span aria-hidden="true">🏧</span>Cierre de caja</span></a></li><li><a href="facturacion.html"><span class="nav-txt"><span aria-hidden="true">🧾</span>Facturación</span></a></li><li><a href="presupuestos.html"><span class="nav-txt"><span aria-hidden="true">📋</span>Presupuestos</span></a></li><li><a href="fiados.html"><span class="nav-txt"><span aria-hidden="true">📒</span>Libreta de fiados</span></a></li><li><a href="empleados.html"><span class="nav-txt"><span aria-hidden="true">👥</span>Empleados</span></a></li></ul></nav>
+</header>
+<div class="content">
+  <div class="topbar">
+    <button id="menuBtn" class="btn" type="button" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    <strong class="titulo-barra"><span aria-hidden="true">🛒</span> Punto de venta</strong>
+    <span class="fecha">Mar 19 ago · 09:42</span>
+    <a class="btn" href="alertas-stock.html">⚠ <span class="js-alertas">5</span> alertas</a>
+    <button id="temaBtn" class="btn" type="button">Modo claro</button>
+  </div>
+  <main>
+    <section class="pos"><div><h1>Punto de Venta</h1><p class="sub">Seleccioná los productos para armar la venta</p>
+    <label for="buscar" class="sr-only">Buscar por nombre o código</label><input type="search" id="buscar" placeholder="Buscar por nombre o código..." style="width:100%;margin-top:1rem">
+    <div class="prod-grid" id="prods"></div></div>
+    <aside class="card cart" aria-label="Carrito"><h2>Carrito</h2><ul class="lista" id="items"></ul><p class="sub" id="carrito-vacio">El carrito está vacío. Tocá un producto para sumarlo.</p>
+    <div class="field"><label for="cliente">Cliente (opcional)</label><input id="cliente" type="text" placeholder="Consumidor final"></div>
+    <div><span class="sub" id="l-desc">Descuento %</span><div class="chips" id="desc" role="group" aria-labelledby="l-desc"></div></div>
+    <div><span class="sub" id="l-pago">Medio de pago</span><div class="chips" id="pago" role="group" aria-labelledby="l-pago"></div></div>
+    <div class="totales"><div><span class="sub">Subtotal</span><span class="num" id="sub"></span></div><div><strong>TOTAL</strong><span class="total-grande" id="total"></span></div></div>
+    <p class="error" id="err-cobro" role="alert"></p><button class="btn btn-primary" id="cobrar" type="button">💵 Cobrar</button></aside></section>
+  </main>
+  <dialog id="ticket" aria-labelledby="ticket-tit"><div id="ticket-contenido"></div><div class="ticket-botones"><button class="btn btn-primary" id="imprimir" type="button">🖨 Imprimir ticket</button><button class="btn" id="cerrar-ticket" type="button">Cerrar</button></div></dialog>
+  <p class="alerta aviso-fijo" id="aviso" role="status" hidden></p>
+  <footer>FerreSys · Gestión ferretera</footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cierre de caja · FerreSys</title>
+<link rel="icon" href="../img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/main.js" defer></script>
+</head>
+<body data-page="cierre" data-raiz="../">
+<header class="sidebar" id="menu">
+  <div class="brand"><img src="../img/logo.svg" alt="Logo de FerreSys: letra G sobre fondo verde azulado"><div><strong>FerreSys</strong><small>Gestión ferretera</small></div></div>
+  <nav aria-label="Navegación principal"><ul class="menu"><li><a href="../index.html"><span class="nav-txt"><span aria-hidden="true">⊞</span>Panel de control</span></a></li><li><a href="punto-de-venta.html"><span class="nav-txt"><span aria-hidden="true">🛒</span>Punto de venta</span></a></li><li><a href="devoluciones.html"><span class="nav-txt"><span aria-hidden="true">↩️</span>Devoluciones</span></a></li><li><a href="inventario.html"><span class="nav-txt"><span aria-hidden="true">📦</span>Inventario</span></a></li><li><a href="aumento-precios.html"><span class="nav-txt"><span aria-hidden="true">💲</span>Aumento de precios</span></a></li><li><a href="alertas-stock.html"><span class="nav-txt"><span aria-hidden="true">⚠️</span>Alertas de stock</span> <span class="badge js-alertas">5</span></a></li><li><a href="cierre-caja.html" aria-current="page"><span class="nav-txt"><span aria-hidden="true">🏧</span>Cierre de caja</span></a></li><li><a href="facturacion.html"><span class="nav-txt"><span aria-hidden="true">🧾</span>Facturación</span></a></li><li><a href="presupuestos.html"><span class="nav-txt"><span aria-hidden="true">📋</span>Presupuestos</span></a></li><li><a href="fiados.html"><span class="nav-txt"><span aria-hidden="true">📒</span>Libreta de fiados</span></a></li><li><a href="empleados.html"><span class="nav-txt"><span aria-hidden="true">👥</span>Empleados</span></a></li></ul></nav>
+</header>
+<div class="content">
+  <div class="topbar">
+    <button id="menuBtn" class="btn" type="button" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    <strong class="titulo-barra"><span aria-hidden="true">🏧</span> Cierre de caja</strong>
+    <span class="fecha">Mar 19 ago · 09:42</span>
+    <a class="btn" href="alertas-stock.html">⚠ <span class="js-alertas">5</span> alertas</a>
+    <button id="temaBtn" class="btn" type="button">Modo claro</button>
+  </div>
+  <main>
+    <section class="page-head"><div><h1>Cierre de Caja</h1><p class="sub" id="resumen">Historial y registro de cierres por turno</p></div><button class="btn btn-primary js-pronto" type="button">+ Nuevo cierre</button></section><section class="card" aria-labelledby="t-ult"><div class="fila-sp"><h2 id="t-ult">Último cierre registrado</h2><span class="sub num" id="ultimo-fecha"></span></div>
+    <div class="grid-5" id="minis"></div><p class="sub" style="margin-top:1rem">Responsable: <strong id="responsable"></strong></p></section>
+    <section aria-label="Historial de cierres"><div class="table-wrap"><table><thead><tr><th scope="col">Fecha</th><th scope="col">Turno</th><th scope="col">Empleado</th><th scope="col" class="num">Ventas</th><th scope="col" class="num">Egresos</th><th scope="col" class="num">Cierre</th><th scope="col" class="num">Dif.</th></tr></thead><tbody id="tabla-body"></tbody></table></div></section>
+  </main>
+  <p class="alerta aviso-fijo" id="aviso" role="status" hidden></p>
+  <footer>FerreSys · Gestión ferretera</footer>
+</div>
+</body>
+</html>

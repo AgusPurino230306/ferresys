@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aumento de precios · FerreSys</title>
+<link rel="icon" href="../img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="../css/styles.css">
+<script src="../js/main.js" defer></script>
+</head>
+<body data-page="aumento" data-raiz="../">
+<header class="sidebar" id="menu">
+  <div class="brand"><img src="../img/logo.svg" alt="Logo de FerreSys: letra G sobre fondo verde azulado"><div><strong>FerreSys</strong><small>Gestión ferretera</small></div></div>
+  <nav aria-label="Navegación principal"><ul class="menu"><li><a href="../index.html"><span class="nav-txt"><span aria-hidden="true">⊞</span>Panel de control</span></a></li><li><a href="punto-de-venta.html"><span class="nav-txt"><span aria-hidden="true">🛒</span>Punto de venta</span></a></li><li><a href="devoluciones.html"><span class="nav-txt"><span aria-hidden="true">↩️</span>Devoluciones</span></a></li><li><a href="inventario.html"><span class="nav-txt"><span aria-hidden="true">📦</span>Inventario</span></a></li><li><a href="aumento-precios.html" aria-current="page"><span class="nav-txt"><span aria-hidden="true">💲</span>Aumento de precios</span></a></li><li><a href="alertas-stock.html"><span class="nav-txt"><span aria-hidden="true">⚠️</span>Alertas de stock</span> <span class="badge js-alertas">5</span></a></li><li><a href="cierre-caja.html"><span class="nav-txt"><span aria-hidden="true">🏧</span>Cierre de caja</span></a></li><li><a href="facturacion.html"><span class="nav-txt"><span aria-hidden="true">🧾</span>Facturación</span></a></li><li><a href="presupuestos.html"><span class="nav-txt"><span aria-hidden="true">📋</span>Presupuestos</span></a></li><li><a href="fiados.html"><span class="nav-txt"><span aria-hidden="true">📒</span>Libreta de fiados</span></a></li><li><a href="empleados.html"><span class="nav-txt"><span aria-hidden="true">👥</span>Empleados</span></a></li></ul></nav>
+</header>
+<div class="content">
+  <div class="topbar">
+    <button id="menuBtn" class="btn" type="button" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    <strong class="titulo-barra"><span aria-hidden="true">💲</span> Aumento de precios</strong>
+    <span class="fecha">Mar 19 ago · 09:42</span>
+    <a class="btn" href="alertas-stock.html">⚠ <span class="js-alertas">5</span> alertas</a>
+    <button id="temaBtn" class="btn" type="button">Modo claro</button>
+  </div>
+  <main>
+    <section class="page-head"><div><h1>Aumento masivo de precios</h1><p class="sub">Actualizá los precios de venta de varios artículos a la vez.</p></div></section>
+    <section class="card" aria-labelledby="t-aum"><h2 id="t-aum">Configurar aumento</h2>
+      <form id="form-aumento" novalidate>
+        <div class="field"><label for="porcentaje">Porcentaje de aumento (%)</label><input id="porcentaje" name="porcentaje" type="number" min="0.1" max="100" step="0.1" placeholder="10"><p class="error" id="err-porcentaje" role="alert"></p></div>
+        <div class="field"><label for="categoria">Aplicar a</label><select id="categoria" name="categoria"></select></div>
+        <div class="field"><label for="redondeo">Redondeo</label><select id="redondeo" name="redondeo"><option value="0">Sin redondeo (al peso)</option><option value="10">Múltiplos de $ 10</option><option value="100">Múltiplos de $ 100</option></select></div>
+        <div class="form-actions"><button class="btn btn-primary" type="submit">Aplicar aumento</button><button class="btn" id="deshacer" type="button">Volver al precio anterior</button></div>
+      </form></section>
+    <section aria-labelledby="t-prev"><h2 id="t-prev">Vista previa</h2><p class="sub" id="hint">Escribí un porcentaje para ver cómo quedan los precios.</p>
+      <div class="table-wrap"><table><thead><tr><th scope="col">Producto</th><th scope="col">Categoría</th><th scope="col" class="num">Precio actual</th><th scope="col" class="num">Precio nuevo</th><th scope="col" class="num">Diferencia</th></tr></thead><tbody id="tabla-body"></tbody></table></div></section>
+  </main>
+  <p class="alerta aviso-fijo" id="aviso" role="status" hidden></p>
+  <footer>FerreSys · Gestión ferretera</footer>
+</div>
+</body>
+</html>
