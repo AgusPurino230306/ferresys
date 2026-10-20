@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Panel de control · FerreSys</title>
+<link rel="icon" href="img/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<script src="js/main.js" defer></script>
+</head>
+<body data-page="panel" data-raiz="">
+<header class="sidebar" id="menu">
+  <div class="brand"><img src="img/logo.svg" alt="Logo de FerreSys: letra G sobre fondo verde azulado"><div><strong>FerreSys</strong><small>Gestión ferretera</small></div></div>
+  <nav aria-label="Navegación principal"><ul class="menu"><li><a href="index.html" aria-current="page"><span class="nav-txt"><span aria-hidden="true">⊞</span>Panel de control</span></a></li><li><a href="pages/punto-de-venta.html"><span class="nav-txt"><span aria-hidden="true">🛒</span>Punto de venta</span></a></li><li><a href="pages/devoluciones.html"><span class="nav-txt"><span aria-hidden="true">↩️</span>Devoluciones</span></a></li><li><a href="pages/inventario.html"><span class="nav-txt"><span aria-hidden="true">📦</span>Inventario</span></a></li><li><a href="pages/aumento-precios.html"><span class="nav-txt"><span aria-hidden="true">💲</span>Aumento de precios</span></a></li><li><a href="pages/alertas-stock.html"><span class="nav-txt"><span aria-hidden="true">⚠️</span>Alertas de stock</span> <span class="badge js-alertas">5</span></a></li><li><a href="pages/cierre-caja.html"><span class="nav-txt"><span aria-hidden="true">🏧</span>Cierre de caja</span></a></li><li><a href="pages/facturacion.html"><span class="nav-txt"><span aria-hidden="true">🧾</span>Facturación</span></a></li><li><a href="pages/presupuestos.html"><span class="nav-txt"><span aria-hidden="true">📋</span>Presupuestos</span></a></li><li><a href="pages/fiados.html"><span class="nav-txt"><span aria-hidden="true">📒</span>Libreta de fiados</span></a></li><li><a href="pages/empleados.html"><span class="nav-txt"><span aria-hidden="true">👥</span>Empleados</span></a></li></ul></nav>
+</header>
+<div class="content">
+  <div class="topbar">
+    <button id="menuBtn" class="btn" type="button" aria-expanded="false" aria-controls="menu">☰ Menú</button>
+    <strong class="titulo-barra"><span aria-hidden="true">⊞</span> Panel de control</strong>
+    <span class="fecha">Mar 19 ago · 09:42</span>
+    <a class="btn" href="pages/alertas-stock.html">⚠ <span class="js-alertas">5</span> alertas</a>
+    <button id="temaBtn" class="btn" type="button">Modo claro</button>
+  </div>
+  <main>
+    <section class="page-head"><div><h1>Panel de Control</h1><p class="sub">Martes 19 de agosto de 2026 · Turno mañana activo</p></div></section>
+    <section class="grid-kpi" aria-label="Indicadores del día"><article class="card kpi"><h2>Ventas de hoy</h2><strong class="teal">$ 184.300</strong><span class="sub">Turno mañana</span></article>
+    <article class="card kpi"><h2>Facturas pendientes</h2><strong class="orange" id="kpi-pendiente"></strong><span class="sub" id="kpi-pendiente-n"></span></article><article class="card kpi"><h2>Total fiados</h2><strong class="purple" id="kpi-fiados"></strong><span class="sub" id="kpi-fiados-n"></span></article><article class="card kpi"><h2>Alertas de stock</h2><strong class="red" id="kpi-alertas"></strong><span class="sub">productos bajo mínimo</span></article></section>
+    <section class="grid-2"><article class="card"><h2>Últimas facturas</h2><ul class="lista" id="lista-facturas"></ul></article>
+    <article class="card"><h2>⚠ Alertas de stock</h2><ul class="lista" id="lista-alertas"></ul></article></section>
+  </main>
+  <p class="alerta aviso-fijo" id="aviso" role="status" hidden></p>
+  <footer>FerreSys · Gestión ferretera</footer>
+</div>
+</body>
+</html>
