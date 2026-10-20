@@ -82,14 +82,8 @@ ferresys/
 
 ## Cómo ejecutarlo
 
-No requiere instalación. Descargá o cloná el repositorio y abrí `index.html` en el navegador.
+Entrar al link de Netlify  https://ferresysf.netlify.app/
 
-```bash
-git clone https://github.com/TU-USUARIO/ferresys.git
-cd ferresys
-```
-
-Para verlo con recarga automática, usá la extensión **Live Server** de VS Code.
 
 ## Accesibilidad y usabilidad
 
@@ -103,8 +97,10 @@ Para verlo con recarga automática, usá la extensión **Live Server** de VS Cod
 
 | Categoría | Puntaje |
 |---|---|
-| Accesibilidad | _completar_ |
-| Buenas prácticas | _completar_ |
+| Accesibilidad | 100 |
+| Buenas prácticas | 100| 
+|Perfomance|90|
+|SEO|90|
 
 ## Cambios respecto al prototipo
 
@@ -114,7 +110,7 @@ Para verlo con recarga automática, usá la extensión **Live Server** de VS Cod
 | Modo claro además del oscuro | Mejora la lectura en mostradores con mucha luz |
 | Miniaturas e imágenes de productos | Ayuda a reconocer el artículo rápido al vender |
 | Devoluciones, aumento de precios y ticket | Necesidades reales de una ferretería que el prototipo no cubría |
-| _Agregar los cambios que surjan del testeo con usuarios_ | _completar_ |
+|  |
 
 ## Limitaciones conocidas
 
@@ -124,4 +120,4 @@ Para verlo con recarga automática, usá la extensión **Live Server** de VS Cod
 
 ## Autores
 
-_Integrantes del equipo y materia._
+Agustín Purino
