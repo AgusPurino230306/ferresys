@@ -6,10 +6,10 @@ Sistema web para administrar una ferretería: ventas, inventario, caja, facturac
 
 | | |
 |---|---|
-| **Integrantes** | _Nombre y apellido de cada integrante_ |
-| **Sitio publicado** | _https://TU-USUARIO.github.io/ferresys/_ |
+| **Integrantes** | Agustín Purino |
+| **Sitio publicado** | https://ferresysf.netlify.app/ |
 | **Prototipo de Figma** | https://www.figma.com/make/pZT1V9jL7ZSubWLf1kw29h/Prototipo-de-sitio-web |
-| **Repositorio** | _https://github.com/TU-USUARIO/ferresys_ |
+| **Repositorio** | https://github.com/AgusPurino230306/ferresys |
 
 ## Problema que resuelve
 
